@@ -1,0 +1,346 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:id="@+id/sv_network_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="100dp">
+
+            <ImageView
+                android:id="@+id/iv_globe"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_globe_new"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_refresh"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:src="@drawable/uptime"
+                app:layout_constraintBottom_toBottomOf="@id/iv_globe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_globe" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="@dimen/dp_network_map_line"
+                android:layout_height="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintEnd_toEndOf="@id/iv_globe"
+                app:layout_constraintStart_toStartOf="@id/iv_globe"
+                app:layout_constraintTop_toBottomOf="@id/iv_globe" />
+
+            <ImageView
+                android:id="@+id/iv_router"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:padding="10dp"
+                android:src="@drawable/route_new"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+
+            <TextView
+                android:id="@+id/tv_wireless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="@string/wireless"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintRight_toLeftOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@id/iv_router" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="@dimen/dp_network_map_line"
+                android:layout_height="25dp"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintEnd_toEndOf="@id/view1"
+                app:layout_constraintLeft_toLeftOf="@id/view1"
+                app:layout_constraintRight_toRightOf="@id/view1"
+                app:layout_constraintStart_toStartOf="@id/view1"
+                app:layout_constraintTop_toBottomOf="@id/iv_router" />
+
+            <TextView
+                android:id="@+id/tv_ethernet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="@string/ethernet"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintLeft_toRightOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@id/iv_router" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_network_map_line"
+                android:layout_marginLeft="100dp"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_network_map_line"
+                android:layout_marginEnd="30dp"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toEndOf="@id/view3"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/tv_2_5g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="3dp"
+                android:text="@string/_2_5g"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/view4"
+                app:layout_constraintEnd_toStartOf="@id/view4" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="@dimen/dp_network_map_line"
+                android:layout_height="25dp"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintStart_toStartOf="@id/view3"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <TextView
+                android:id="@+id/tv_5g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="3dp"
+                android:text= "@string/_5g"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/view4"
+                app:layout_constraintStart_toEndOf="@id/view4" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_network_map_line"
+                android:layout_marginStart="25dp"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintEnd_toEndOf="@id/view4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view4" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_network_map_line"
+                android:layout_marginEnd="10dp"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintStart_toStartOf="@id/view4"
+                app:layout_constraintTop_toBottomOf="@id/view4"
+                app:layout_constraintEnd_toEndOf="@+id/view2"/>
+
+            <LinearLayout
+                android:id="@+id/ll_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintTop_toBottomOf="@+id/view4">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/view4">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parent_wireless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/view5"
+                app:layout_constraintTop_toBottomOf="@id/view4"
+                app:layout_constraintEnd_toEndOf="@+id/view8">
+
+                <LinearLayout
+                    android:id="@+id/ll_left1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_right1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/parent_ethernet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/view7"
+                app:layout_constraintTop_toBottomOf="@id/view7">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="@dimen/dp_network_map_line"
+                android:layout_height="25dp"
+                android:background="@color/color_network_map_line"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/view2"
+                app:layout_constraintLeft_toLeftOf="@id/view2"
+                app:layout_constraintRight_toRightOf="@id/view2"
+                app:layout_constraintStart_toStartOf="@id/view2"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <TextView
+                android:id="@+id/tv_band"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="3dp"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                app:layout_constraintEnd_toStartOf="@id/ll_single" />
+
+            <LinearLayout
+                android:id="@+id/ll_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/view2"
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_band_wireless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:text="2.4 GHz"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                app:layout_constraintStart_toEndOf="@id/view4" />
+
+            <LinearLayout
+                android:id="@+id/ll_single_wireless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/view4"
+                app:layout_constraintTop_toBottomOf="@id/view4">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view54"
+                android:layout_width="@dimen/dp_network_map_line"
+                android:layout_height="25dp"
+                android:visibility="gone"
+                android:background="@color/color_network_map_line"
+                app:layout_constraintStart_toEndOf="@id/view7"
+                app:layout_constraintTop_toBottomOf="@id/view7" />
+
+            <TextView
+                android:id="@+id/tv_5band_wireless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:text="5 GHz"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                app:layout_constraintEnd_toStartOf="@id/view54" />
+
+            <LinearLayout
+                android:id="@+id/ll_5single_wireless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/view7"
+                app:layout_constraintTop_toBottomOf="@id/view54">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNoDevices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp50"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/iv_router"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="No Connected Devices."/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

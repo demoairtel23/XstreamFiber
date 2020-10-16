@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">Xstream Fiber</string>
+
+    <string name="disableGuestSSID">0</string>
+    <string name="enableGuestSSID">1</string>
+
+    <string name="successProgMsg">Your WiFi network is Optimized.</string>
+    <string name="successProgMsgQD">WiFi network is optimized. Please wait 30 seconds for the link to stabilize.</string>
+    <string name="timeout">Request Timeout please try again.</string>
+
+    <string name="network_map">Network Map</string>
+    <string name="excellent">Excellent</string>
+    <string name="good">Good</string>
+    <string name="fair">Fair</string>
+    <string name="weak">Weak</string>
+    <string name="parental_control">Parental Control</string>
+    <string name="blocked_devices">Blocked Devices</string>
+    <string name="wireless">WIRELESS</string>
+    <string name="ethernet">ETHERNET</string>
+    <string name="_2_5g">2.4 GHz</string>
+    <string name="_5g">5 GHz</string>
+    <string name="pc1">PC1</string>
+    <string name="pc2">PC2</string>
+    <string name="title_activity_airtel_base">AirtelBaseActivity</string>
+    <string name="error">Error</string>
+    <string name="error_approve_it_rejected">You have rejected the Approve-it™ message.</string>
+    <string name="error_fail_on_approve_it_screen">A server error has occurred. Please retry again.</string>
+    <string name="error_generic">A server error has occurred. Please try again later.</string>
+    <string name="error_http_authorization">Cannot authenticate</string>
+    <string name="error_http_bad_request">Connection to server was lost</string>
+    <string name="error_http_forbidden">Connection to server was lost</string>
+    <string name="error_http_generic">Connection to server was lost</string>
+    <string name="error_in_finger_print">Some error occurred in finger print detection.Please retry.</string>
+    <string name="error_linking_accoutns">Error during linking of accounts</string>
+    <string name="error_maintenance_mode">Maintenance mode.</string>
+    <string name="error_message_card_inactive">There is some problem with your card\nKindly try with your personal card</string>
+    <string name="error_message_card_locked">Card has been blocked.</string>
+    <string name="error_message_card_pin_invalid_primary_account_number">Invalid PIN.</string>
+    <string name="error_message_card_technical_error">Technical Error.</string>
+    <string name="error_message_card_validation_failed">Card number and ATM PIN do not match.</string>
+    <string name="error_message_insufficient_space">Insufficient Space</string>
+    <string name="error_message_invalid_pin_card">Card validation failed.</string>
+    <string name="error_message_password_do_not_match">password do not match</string>
+    <string name="error_message_profile_something_wrong">Something is wrong with your profile.</string>
+    <string name="error_message_profile_wrong_creds">Profile number, PIN and password do not match.</string>
+    <string name="error_message_provide_valid_password">Please provide valid Password</string>
+    <string name="error_message_tnc_not_accepted">Latest Terms and conditions not accepted</string>
+    <string name="error_message_username_not_found_forgot_pass">We could not find this username, please try with the correct username.</string>
+    <string name="error_message_wrong_user_details">Cannot find the provided user details. Please correct and retry.</string>
+    <string name="error_no_content">No content to display</string>
+    <string name="error_no_linkable_accounts">You have no more accounts available to link to your profile.</string>
+    <string name="error_no_network">No Internet Connection</string>
+    <string name="error_not_found">Server url not found</string>
+    <string name="error_null_base_url">Server url is not valid.</string>
+    <string name="error_repeated_password">You have already used this password, please try another.</string>
+    <string name="error_server">Server connection lost.</string>
+    <string name="error_server_error">Connection to server was lost</string>
+    <string name="error_socket_timeout">Connection to server was lost</string>
+    <string name="error_ssl_error">SSL certificates mismatch</string>
+    <string name="error_unknown">Some error occurred</string>
+    <string name="error_username_taken">This Username is already taken. Try some other username.</string>
+    <string name="error_wrong_otp">Pin entered is incorrect.</string>
+    <string name="error_message_something_went_wrong">Something went wrong.</string>
+    <string name="channelTextview">The proper WiFi channel can significantly improve your WiFi coverage and performance. Click below to optimize your WiFi network.</string>
+    <string name="progressTvMsg">Please wait. Channel selection in progress.</string>
+    <string name="unblocked_devices_txt">Unblocked Devices</string>
+    <string name="mobile_number">Registered Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="title_location_permission">Location Permission</string>
+    <string name="text_location_permission">Allow AirtelBroadband to access this device\'s location?</string>
+    <string name="allow">Allow</string>
+    <string name="forgot_pwd_text">Please enter your registered mobile number.</string>
+    <string name="text_verification">We will send a verification code on your registered mobile number.</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="new_password">New Password</string>
+    <string name="text_reboot_router">*Please wait 2-3 minutes for the link to stabilize.</string>
+    <string name="text_route_to_link">*This will redirect to Speedtest by Ookla.</string>
+    <string name="not_connected_to_internet_pld">Not connected to internet!</string>
+    <string name="not_connected_to_internet">Oops! No Internet</string>
+    <string name="refresh_after_two_minutes">Refresh after two minutes.</string>
+    <string name="text_quick_diagnostic_old">*Ensure that your modem is switched ON.</string>
+    <string name="text_quick_diagnostic">If you are experiencing browsing issues while connected to office VPN, try to access internet after disconnecting VPN. If the experience is better contact your IT support team.</string>
+    <string name="password_char_msg">*Password should be 8-20 characters.</string>
+    <string name="enter_friends_address">*Enter friend\'s address</string>
+    <string name="appupdater_btn_update">Update</string>
+    <string name="appupdater_channel_name">Update notifications</string>
+    <string name="appupdater_channel" translatable="false">appupdater_channel_01</string>
+    <string name="update_title"><![CDATA[<b>Update Information</b>]]></string>
+    <string name="update_content_force">This app is currently not supported. Please update to new version.</string>
+    <string name="update_content_normal">A newer version of this app is available. Please update to new version.</string>
+    <string name="update_upgrade">UPDATE</string>
+    <string name="update_cancel">CANCEL</string>
+    <string name="update_nothanks">NO THANKS</string>
+    <string name="logout_due_to_technical_reason"></string>
+    <string name="error_timeout">Time Out</string>
+    <string name="error_noconnection">No Connection</string>
+    <string name="codeCaptcha">Code</string>
+    <string name="text_login"><u>Login</u></string>
+    <string name="your_broadband_connection_is_fine_if_you_still_wish_a_call_back_click_here">Your broadband connection is fine. If you still wish a call back, click here</string>
+    <string name="e_g_wifi_name">e.g. WiFi Name Is airtel\n\n<b>Same WiFi Name</b>\nFor 2.4GHz = airtel\nFor 5GHz = airtel\n\n<b>Different WiFi Name</b>\nFor 2.4GHz = airtel\nFor 5GHz = airtel_5G</string>
+    <string name="select_wifi_name_option_for_2_4g_amp_5g"><![CDATA[Select WiFi Name Option for 2.4GHz & 5GHz]]></string>
+    <string name="help_support"><![CDATA[Help & Feedback]]></string>
+    <string name="to_know_all_about_app_features_functionality"><![CDATA[To know all about APP features & functionality.]]></string>
+    <string name="for_any_app_related_support_feedback">For any app related support/feedback.</string>
+    <string name="text_wifi_optimize_note">*Please wait 30-40 seconds for the link to stabilize.</string>
+
+    <string-array name="edits_array_1">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/viewSing1"
+            android:layout_width="@dimen/dp_network_map_line"
+            android:layout_height="40dp"
+            android:background="@color/color_network_map_line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <View
+            android:id="@+id/viewSing2"
+            android:layout_width="20dp"
+            android:layout_height="@dimen/dp_network_map_line"
+            android:background="@color/color_network_map_line"
+            app:layout_constraintStart_toStartOf="@id/viewSing1"
+            app:layout_constraintBottom_toBottomOf="@id/viewSing1"/>
+
+        <ImageView
+            android:id="@+id/iv_green1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_green_screen_new"
+            app:layout_constraintStart_toEndOf="@id/viewSing2"
+            app:layout_constraintTop_toTopOf="@id/viewSing2"
+            app:layout_constraintBottom_toBottomOf="@id/viewSing2" />
+
+        <TextView
+            android:id="@+id/tv_pcSing1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdsadfadsfa"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp12"
+            android:padding="@dimen/dp3"
+            android:maxLines="3"
+            app:layout_constraintTop_toBottomOf="@id/iv_green1"
+            app:layout_constraintStart_toEndOf="@id/viewSing3" />
+
+        <View
+            android:id="@+id/viewSing3"
+            android:layout_width="@dimen/dp_network_map_line"
+            android:layout_height="55dp"
+            android:background="@color/color_network_map_line"
+            app:layout_constraintTop_toBottomOf="@id/viewSing1"
+            app:layout_constraintStart_toStartOf="@+id/viewSing1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

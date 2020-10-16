@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.GuestWifiSetting">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:layout_below="@+id/layout_toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editSSID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:drawablePadding="4dp"
+                    android:hint="WiFi Name"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:padding="10dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userNameLayout"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:drawablePadding="4dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="10dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--        commented honey's code by gatisha-->
+            <!--    <LinearLayout-->
+            <!--        android:id="@+id/ssidLayout"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_below="@id/layout_toolbar"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginTop="20dp"-->
+            <!--        android:layout_marginLeft="30dp"-->
+            <!--        android:layout_marginRight="30dp"-->
+            <!--        android:orientation="horizontal"-->
+            <!--        android:weightSum="2">-->
+
+
+            <!--        <TextView-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="50dp"-->
+            <!--            android:layout_marginRight="10dp"-->
+            <!--            android:layout_weight="0.6"-->
+            <!--            android:gravity="center_vertical"-->
+            <!--            android:paddingLeft="10dp"-->
+            <!--            android:text="SSID"-->
+            <!--            android:textColor="@android:color/black" />-->
+
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            android:id="@+id/userNameLayout"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_weight="1.4"-->
+            <!--            android:layout_height="wrap_content"-->
+
+            <!--            >-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:padding="10dp"-->
+            <!--                android:layout_marginTop="32dp"-->
+            <!--                android:id="@+id/editSSID"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--                android:drawablePadding="4dp"-->
+            <!--                android:hint="SSID"-->
+            <!--                android:inputType="textEmailAddress"/>-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--    </LinearLayout>-->
+
+            <!--    <LinearLayout-->
+            <!--        android:id="@+id/paswordLayout"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_below="@id/ssidLayout"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginLeft="30dp"-->
+            <!--        android:layout_marginRight="30dp"-->
+            <!--        android:orientation="horizontal"-->
+            <!--        android:weightSum="2">-->
+
+
+            <!--        <TextView-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="50dp"-->
+            <!--            android:layout_marginRight="10dp"-->
+            <!--            android:layout_weight="0.6"-->
+            <!--            android:gravity="center_vertical"-->
+            <!--            android:paddingLeft="10dp"-->
+            <!--            android:text="Password"-->
+            <!--            android:textColor="@android:color/black" />-->
+
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            android:id="@+id/etPasswordLayout"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_weight="1.4"-->
+            <!--            android:layout_below="@+id/userNameLayout"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            app:passwordToggleEnabled="true">-->
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:padding="10dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:id="@+id/editPass"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--                android:drawablePadding="4dp"-->
+            <!--                android:hint="Password"-->
+            <!--                android:inputType="textPassword"/>-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+            <!--    </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/txt_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/password_char_msg"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/txtGuest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Guest network duration"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/txtGuest"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/hr5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_gray_color"
+                    android:textColor="@color/btn_text_color"
+                    android:text="5 hours"
+                    android:textAllCaps="false"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/hr10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_gray_color"
+                    android:textColor="@color/btn_text_color"
+                    android:text="10 hours"
+                    android:textAllCaps="false"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/hr24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_gray_color"
+                    android:textColor="@color/btn_text_color"
+                    android:text="24 hours"
+                    android:textAllCaps="false"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/always"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_gray_color"
+                    android:textColor="@color/btn_text_color"
+                    android:text="Always"
+                    android:textAllCaps="false"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeLayout"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnSubmitNetwork"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_round"
+                    android:enabled="false"
+                    android:padding="3dp"
+                    android:text="SUBMIT"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_disable_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="*Guest WiFi is already enable."
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#c0c0c0" />
+
+            <TextView
+                android:id="@+id/txt_ssid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Current Guest WiFi Name"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtSingleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="2.4 GHz"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtSingleSSID"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/currentSSID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_ssid"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt2GHzHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="2.4 GHz"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt2ghz"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:paddingLeft="10dp"
+                        android:text=""
+                        android:visibility="gone"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/secondGhzLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt5GHzHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:text="5 GHz"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt5ghz"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text=""
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timeRemainingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/currentSSID"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="Time Remaining"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvAlways"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:gravity="end"
+                    android:text="Always"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llTimer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+
+                    android:textSize="16sp">
+
+                    <TextView
+                        android:id="@+id/tv_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="HH:"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="MM:"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_seconds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="SS"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/deactivateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeRemainingLayout"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/white"
+                    android:text="Enable/Disable Guest WiFi"
+                    android:textSize="16sp" />
+
+                <!-- <ToggleButton
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textSize="16sp"
+
+                     android:textColor="@android:color/holo_red_dark"
+                     android:text=""/>-->
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_toggle"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:theme="@style/SwitchCompatStyle" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDisabledToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/white"
+                android:text="*Can not deactivate as No Guest WiFi present."
+                android:visibility="gone" />
+
+            <!--<LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/timeRemainingLayout"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAllCaps="false"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/white"
+                    android:text="Deactivate"
+                    android:background="@color/colorPrimary"
+                    />
+            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

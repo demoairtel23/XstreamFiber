@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary_old">#EE1C25</color>
+    <color name="colorPrimary">#ED1C24</color>
+    <color name="colorPrimaryDark_old">#BB0000</color>
+    <color name="colorPrimaryDark">#55514d</color>
+    <color name="colorAccent_old">#BB0000</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#019114</color>
+    <color name="grey">#A8A8A8</color>
+    <color name="light_gray_color">#D1D1D1</color>
+    <color name="light_light_gray_color">#E7E6E6</color>
+    <color name="btn_text_color">#E6000000</color>
+
+    <color name="black">#000000</color>
+    <color name="toast_background">#E6E3E3</color>
+
+
+    <color name="new_blue">#3258d3</color>
+    <color name="new_blue_dark">#0840F3</color>
+    <color name="new_blue_light">#5D81F5</color>
+
+    <color name="btn_disable_red">#FF765F</color>
+    <color name="btn_disable_grey">#808080</color>
+    <color name="btn_disable_blue">#7E93FF</color>
+
+
+    <color name="greenTextColor">#4DA25C</color>
+    <color name="defaultGray">#3C3F41</color>
+    <color name="bgColor">#212121</color>
+    <color name="color_network_map_line_old">@android:color/darker_gray</color>
+    <color name="color_network_map_line">#d2d0d0</color>
+    <color name="bgColorRect">#3a3835</color>
+
+</resources>

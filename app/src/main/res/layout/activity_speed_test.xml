@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bgColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SpeedTest">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_toolbar"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/llSpeedTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ui_internet_speedtest"/>
+
+        <Button
+            android:id="@+id/btnSpeedTest"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Speed Test"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_round"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/text_route_to_link"/>
+</RelativeLayout>
+

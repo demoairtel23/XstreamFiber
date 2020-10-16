@@ -1,0 +1,81 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+        <item name="android:itemBackground">@color/bgColor</item>
+
+
+        <item name="android:navigationBarColor" >@color/bgColor</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+
+    </style>
+
+
+    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupElevation">6dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyTheme" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/bgColor</item>
+        <item name="android:button">@color/bgColor</item>
+        <item name="android:positiveButtonText">@color/white</item>
+        <item name="android:negativeButtonText">@color/white</item>
+        <item name="android:text">@color/white</item>
+    </style>
+
+    <style name="AlertDialogDanger" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@android:color/holo_red_dark</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:background">@color/bgColor</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@android:color/holo_red_dark</item>
+    </style>
+
+    <!--    <style name="MyTheme" parent="android:style/Theme.Holo.Light">-->
+    <!--        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.ActionButton.Overflow">-->
+    <!--        <item name="android:src">@drawable/my_action_bTutton_overflow</item>-->
+    <!--    </style>-->
+
+    <style name="SwitchCompatStyle">
+        <item name="thumbTint">@color/switch_color</item>
+        <item name="trackTint">@color/switch_color</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

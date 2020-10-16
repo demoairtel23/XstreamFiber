@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/check_user_data"
+        android:orderInCategory="100"
+        android:title="Data Usage "
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/refer_friend"
+        android:orderInCategory="100"
+        android:title="Refer A Friend "
+        app:showAsAction="never" />-->
+    <!--<item
+        android:id="@+id/tool"
+        android:orderInCategory="100"
+        android:title="FAQ "
+        app:showAsAction="never" />-->
+    <!--<item
+        android:id="@+id/rate_us"
+        android:orderInCategory="100"
+        android:title="Rate us "
+        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/signout"
+        android:orderInCategory="100"
+        android:title="Logout "
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.WifiSetting">
+
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_below="@id/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userNameLayout"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:layout_marginTop="32dp"
+                android:id="@+id/editSSID"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:drawablePadding="4dp"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:hint="WiFi Name"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_below="@+id/userNameLayout"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPass"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        commented honey's code by gatisha-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ssidLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_below="@id/layout_toolbar"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="2">-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_weight="0.6"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:text="SSID"-->
+<!--            android:textColor="@android:color/black" />-->
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/userNameLayout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1.4"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            >-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/editSSID"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:backgroundTint="@color/colorPrimaryDark"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:hint="SSID"-->
+<!--                android:inputType="textEmailAddress"/>-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/clearText"-->
+<!--            android:layout_width="23dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_height="23dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_gravity="right|bottom"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="@android:drawable/ic_delete" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/paswordLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_below="@id/ssidLayout"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="2">-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_weight="0.6"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:text="Pasword"-->
+<!--            android:textColor="@android:color/black" />-->
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/etPasswordLayout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1.4"-->
+<!--            android:layout_below="@+id/userNameLayout"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:passwordToggleEnabled="true">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/editPass"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:backgroundTint="@color/colorPrimaryDark"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:hint="Password"-->
+<!--                android:inputType="textPassword"/>-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+<!--    </LinearLayout>-->
+
+       <TextView
+           android:id="@+id/txt_msg"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/white"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="30dp"
+           android:layout_marginRight="30dp"
+           android:text="@string/password_char_msg" />
+
+        <RelativeLayout
+            android:id="@+id/rlWifiNameType"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvWifiNameType"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_wifi_name_option_for_2_4g_amp_5g"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/imgHelp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/tvWifiNameType"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="showPopupWindow"
+                android:src="@drawable/ic_info_white_24dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llWifiNameTypeOption"
+            android:visibility="gone"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSame"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/light_gray_color"
+                android:textColor="@color/btn_text_color"
+                android:text="Same WiFi Name"
+                android:textAllCaps="false"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnDifferent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/light_gray_color"
+                android:textColor="@color/btn_text_color"
+                android:text="Different WiFi Name"
+                android:textAllCaps="false"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+<!--       <LinearLayout-->
+<!--           android:id="@+id/btnLayout"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:gravity="center"-->
+<!--           android:layout_below="@+id/txt_msg"-->
+<!--           >-->
+           <Button
+               android:id="@+id/btnSubSSIDPass"
+               android:layout_width="match_parent"
+               android:layout_marginLeft="60dp"
+               android:layout_marginRight="60dp"
+               android:layout_height="40dp"
+               android:text="SUBMIT"
+               android:layout_gravity="center"
+               android:textColor="#ffffff"
+               android:layout_marginTop="50dp"
+               android:layout_marginBottom="50dp"
+               android:background="@drawable/button_round"
+               android:padding="3dp"
+               />
+<!--       </LinearLayout>-->
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btnLayout"
+        android:layout_marginBottom="10dp"
+        android:background="#c0c0c0"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current WiFi Name"
+        android:layout_below="@+id/view"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txt_ssid"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/txtSingleHeading"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="2.4 GHz"/>
+
+        <TextView
+            android:id="@+id/txtSingleSSID"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="10dp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:text="2.4 GHz"
+                android:id="@+id/txt2GHzHeading"/>
+          <!--  <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="2.4 GHz"
+                android:id="@+id/txt_2.4"
+
+                />-->
+
+            <TextView
+                android:id="@+id/txt2ghz"
+                android:visibility="gone"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:text="5 GHz"
+                android:id="@+id/txt5GHzHeading"/>
+            <TextView
+                android:id="@+id/txt5ghz"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WifiSetting">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
+    android:layout_marginLeft="26dp"
+    android:layout_marginRight="26dp"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/editSsid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawablePadding="4dp"
+            android:hint="SSID"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawablePadding="4dp"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="* "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" This password must contain 8 to 20 characters"/>
+
+</LinearLayout>
+    <Button
+        android:id="@+id/btnSubmitNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:text="Submit"/>
+
+</LinearLayout>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:text="Current Guest SSID"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="30dp"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2.4 GHZ"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5 GHZ"
+            android:textColor="@android:color/black"/>
+
+
+</LinearLayout>
+</LinearLayout>-->

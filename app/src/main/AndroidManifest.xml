@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.airtel.xstreamfiber">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".base.AirtelApplication"
+        android:allowBackup="false"
+        android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale|screenSize"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.HowToRegister" />
+        <activity android:name=".Activity.SpeedTestActivity" />
+        <activity
+            android:name=".Activity.CheckUserData"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".Activity.ReferFriend"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".Activity.ResetPassword"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.ForgetPassword"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".base.AirtelBaseActivity"
+            android:label="@string/title_activity_airtel_base"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.NetworkMapActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.ParentalControlActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:noHistory="true" />
+        <activity
+            android:name=".Activity.QuickDiagnosticNew"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.Registration"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.OptimizeWifiNetwork"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.GuestWifiSetting"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.HeatMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SpeedTest"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.RebootRouter"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.WifiSignalQuality"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.DeviceManager"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.WifiSetting"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.MainMenuActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.FAQActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.HelpAndFeedbackActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".Activity.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.Login"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.Feedback"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".Activity.TrackRequestActivity"
+            android:configChanges="keyboardHidden|orientation" />
+
+        <service android:name=".Apphelper.CountdownService" />
+
+        <receiver android:name=".Apphelper.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

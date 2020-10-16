@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".Activity.OptimizeWifiNetwork">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollOptimizeWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_toolbar"
+        android:layout_above="@+id/tvNoteOptimize"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imageViewWifi"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/wifi_optimise" />
+
+            <TextView
+                android:id="@+id/channelTv"
+                android:layout_below="@+id/imageViewWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/white"
+                android:text="@string/channelTextview"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/btnOptimizeNetworkReset"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_below="@+id/channelTv"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_round"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Smart WiFi Optimization"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/progressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnOptimizeNetworkReset"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="@string/progressTvMsg"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llOptimize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressTv"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="Current WiFi Channel_2.4GHz"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvChannel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@+id/tv_channel"
+                        android:gravity="end"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+                <View
+                    android:id="@+id/channel2Card"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_channel5G"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="Current WiFi Channel_5GHz"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvChannel5G"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@+id/tv_channel5G"
+                        android:gravity="end"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+                <View
+                    android:id="@+id/channel5Card"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvNoteOptimize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:text="@string/text_wifi_optimize_note"/>
+
+</RelativeLayout>
